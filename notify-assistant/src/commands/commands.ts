@@ -9,28 +9,37 @@ Office.onReady(info => {
 
 /**
  * Shows a notification when the add-in command is executed.
- * @param event 
+ * @param event
  */
 function action(event: Office.AddinCommands.Event) {
   const message: Office.NotificationMessageDetails = {
-    type: Office.MailboxEnums.ItemNotificationMessageType.InformationalMessage, 
+    type: Office.MailboxEnums.ItemNotificationMessageType.InformationalMessage,
     message: "Reminder enabled.",
     icon: "Icon.80x80",
     persistent: true
-  }
-  
-  // Show a notification message
-  Office.context.mailbox.item.notificationMessages.replaceAsync("action", message);
+  };
 
+  // Show a notification message
+  Office.context.mailbox.item.notificationMessages.replaceAsync(
+    "action",
+    message
+  );
+  console.log("here we are: ");
+  console.log(Office.context.mailbox.item.subject);
+  console.log(Office.context.mailbox.item.start);
+  console.log(Office.context.mailbox.item.location);
   // Be sure to indicate when the add-in command function is complete
   event.completed();
 }
 
-function getGlobal() { 
-  return (typeof self !== "undefined") ? self :
-    (typeof window !== "undefined") ? window : 
-    (typeof global !== "undefined") ? global :
-    undefined;
+function getGlobal() {
+  return typeof self !== "undefined"
+    ? self
+    : typeof window !== "undefined"
+    ? window
+    : typeof global !== "undefined"
+    ? global
+    : undefined;
 }
 
 const g = getGlobal() as any;
