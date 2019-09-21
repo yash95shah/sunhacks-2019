@@ -4,7 +4,7 @@
   <Version>1.0.0.0</Version>
   <ProviderName>SunHacks 2019</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="notify-assistant"/>
+  <DisplayName DefaultValue="Notify Assistant"/>
   <Description DefaultValue="Get calendar alerts on your personal assistant."/>
   <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-80.png"/>
@@ -95,12 +95,12 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="Notify Assistant"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane"/>
-        <bt:String id="ActionButton.Label" DefaultValue="Perform an action"/>
+        <!-- <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane"/> -->
+        <bt:String id="ActionButton.Label" DefaultValue="Remind Me"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying all available properties."/>
-        <bt:String id="ActionButton.Tooltip" DefaultValue="Perform an action when clicked."/>
+        <!-- <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying all available properties."/> -->
+        <bt:String id="ActionButton.Tooltip" DefaultValue="Remind me later through my digital assistant."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

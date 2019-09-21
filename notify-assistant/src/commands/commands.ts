@@ -14,7 +14,7 @@ Office.onReady(info => {
 function action(event: Office.AddinCommands.Event) {
   const message: Office.NotificationMessageDetails = {
     type: Office.MailboxEnums.ItemNotificationMessageType.InformationalMessage, 
-    message: "Performed action.",
+    message: "Reminder enabled.",
     icon: "Icon.80x80",
     persistent: true
   }
